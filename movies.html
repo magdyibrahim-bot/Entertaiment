@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entertainment</title>
+    <link rel="stylesheet" href="css/categorical.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/star.css">
     <link rel="stylesheet" href="css/movies.css">
     <link rel="stylesheet" href="css/card_style.css">
@@ -63,13 +65,31 @@
     </div>
 
     <div class="centered-line"></div>
+    
     <div class="container_1">
+
         <div class="line"></div>
         <span class="text"><b>Latest Releases</b></span>
+
+        <div class="container_2">
+            <input id="searchbar" onkeyup="searchItems()" type="text" placeholder="Search movies...">
+        </div>
+
+    </div>
+
+    <div class="button-container">
+        <button class="category-button" onclick="filterCards('all')">All</button>
+        <button class="category-button" onclick="filterCards('action')">Action</button>
+        <button class="category-button" onclick="filterCards('drama')">Drama</button>
+        <button class="category-button" onclick="filterCards('adventure')">Adventure</button>
+        <button class="category-button" onclick="filterCards('fantasy')">Fantasy</button>
+        <button class="category-button" onclick="filterCards('horror')">Horror</button>
+        <button class="category-button" onclick="filterCards('comedy')">Comedy</button>
+        <button class="category-button" onclick="filterCards('romance')">Romance</button>
     </div>
 
     <div class="flex">
-        <div class="card" id="film_1">
+        <div class="card" id="film_1" data-category="horror">
             <img src="img/0.jpg" alt="Movie Image" class="movie-image">
             <div class="card-content">
                 <h2 class="movie-title">New Life</h2>
@@ -115,7 +135,7 @@
             </div>
         </div>
 
-        <div class="card" id="film_2">
+        <div class="card" id="film_2" data-category="action">
             <img src="img/4.jpg" alt="Movie Image" class="movie-image">
             <div class="card-content">
                 <h2 class="movie-title">Damsel</h2>
@@ -161,7 +181,7 @@
             </div>
         </div>
 
-        <div class="card" id="film_3">
+        <div class="card" id="film_3" data-category="comedy">
             <img src="img/3 (1).jpg" alt="Movie Image" class="movie-image">
             <div class="card-content">
                 <h2 class="movie-title">The Wolf of Wall Street</h2>
@@ -249,6 +269,8 @@
     <script src="script/script.js"></script>
     <script src="script/menu.js"></script>
     <script src="script/star.js"></script>
+    <script src="script/search.js"></script>
+    <script src="script/categorical.js"></script>
 </body>
 
 </html>
