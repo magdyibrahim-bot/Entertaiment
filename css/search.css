@@ -1,0 +1,28 @@
+.container_2 {
+    display: flex;
+}
+
+.container_2:focus{
+    border: solid rgb(138, 12, 12); 
+}
+
+.line {
+    height: 20px;
+    margin-right: 2px;
+}
+
+.text {
+    margin-right: auto;
+    padding-right: 2px;
+    font-size: 20px;
+}
+
+#searchbar {
+    padding: 10px;
+    border-radius: 15px;
+    border: solid rgb(138, 12, 12);
+    width: 100%;
+}
+#searchbar:focus{
+    border: solid rgb(138, 12, 12);
+}
