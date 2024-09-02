@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #010101;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    max-width: 72rem;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bar {
+    width: 1.9rem;
+    height: 1.5px;
+    background-color: #eee;
+    transition: .5s;
+    position: relative;
+}
+
+.bar::before,
+.bar::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: #eee;
+    transition: .5s;
+}
+
+.bar::before {
+    transform: translateY(-9px);
+}
+
+.bar::after {
+    transform: translateY(9px);
+}
+
+.container.active .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+}
+
+.container.active .bar::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.container.active .bar::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+    transform-origin: left;
+    transition: .5s;
+}
+
+/* Slider Styles */
+.slider {
+    height: 100vh;
+    margin-top: -50px;
+    position: relative;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .list .item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.slider .list .item .content {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+
+.slider .list .item .content p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.slider .list .item .content h2 {
+    font-size: 55px;
+    margin: 0;
+    line-height: 100px;
+    text-transform: uppercase;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes ShowContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: ShowContent .5s .7s ease-in-out 1 forwards;
+}
+
+.slider .list .item.active h2 {
+    animation-delay: 1s;
+}
+
+.slider .list .item.active p:nth-child(3) {
+    animation-duration: 1.3s;
+}
+
+.arrows {
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+}
+
+.arrows button {
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #fff;
+    transition: .5s;
+}
+
+.arrows button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.thumbnail::-webkit-scrollbar {
+    width: 0;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.thumbnail .item.active {
+    filter: brightness(1.2);
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .slider .list .item .content h2 {
+        font-size: 45px;
+    }
+
+    .thumbnail {
+        height: 200px;
+        padding: 0 20px;
+    }
+
+    .arrows {
+        top: 20%;
+    }
+
+    .links {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .slider {
+        height: 80vh;
+        margin-top: -20px;
+    }
+
+    .slider .list .item .content h2 {
+        font-size: 30px;
+    }
+
+    .thumbnail {
+        height: 150px;
+        padding: 0 10px;
+    }
+
+    .arrows {
+        top: 10%;
+    }
+
+    .links {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider .list .item .content h2 {
+        font-size: 24px;
+    }
+
+    .thumbnail {
+        height: 120px;
+    }
+
+    .arrows button {
+        width: 30px;
+        height: 30px;
+        font-size: large;
+    }
+
+    .links {
+        width: 80%;
+    }
+}
+
+.links {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: #eee;
+    padding: .7rem 0;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .3s;
+    transform: translateY(10px);
+    animation: hide .5s forwards ease;
+}
+
+.links a:hover {
+    transform: scale(1.05);
+}
+
+.container.active .links a {
+    animation: appear .5s forwards ease var(--i);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: black;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: .5s;
+    z-index: -1;
+    border: 2px solid black;
+}
+
+.shadow.one {
+    z-index: -1;
+    opacity: 0.15;
+}
+
+.shadow.two {
+    z-index: -2;
+    opacity: .1;
+}
+
+.container.active .shadow.one {
+    transform: perspective(1300px) rotateY(-2deg);
+}
+
+.container.active .shadow.two {
+    transform: perspective(1300px) rotateY(-3deg);
+}
