@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entertainment</title>
+    <link rel="stylesheet" href="css/trailer.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/categorical.css">
     <link rel="stylesheet" href="css/search.css">
@@ -95,13 +96,21 @@
             <div class="card-content">
                 <h2 class="movie-title">LOTR(1st episode)</h2>
                 <p><i class="fa-solid fa-star"></i> 9.5/10</p>
-                <a href="https://www.mediafire.com/file/ld12zvo4ijz73ra/The.Lord.of.the.Rings.The.Rings.of.Power.S02E01.EgyDead.CoM.mp4/file" target="_blank" class="download-button">Download</a>
-                <a href="https://vidhideplus.com/file/vtgpgauyxj7q" target="_blank" class="download-button">Watch</a>
+                <a href="https://vidhideplus.com/file/vtgpgauyxj7q" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://www.mediafire.com/file/ld12zvo4ijz73ra/The.Lord.of.the.Rings.The.Rings.of.Power.S02E01.EgyDead.CoM.mp4/file" target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="#" class="trailer-button" data-trailer="https://vidhideplus.com/embed/rbalp2ck1pvk"><i class="fa-solid fa-rectangle-ad"></i></a>
+                
             </div>
         </div>
 
     </div>
 
+    <div id="trailerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="trailerVideo" width="640" height="360" src="" frameborder="0" allow="autoplay; encrypted-media"  FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO  allowfullscreen></iframe>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
@@ -145,6 +154,7 @@
     <script src="script/star.js"></script>
     <script src="script/search_2.js"></script>
     <script src="script/categorical.js"></script>
+    <script src="script/trailer.js"></script>
 </body>
 
 </html>
