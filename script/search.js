@@ -3,7 +3,7 @@ function searchItems() {
     let input = document.getElementById('searchbar').value.toLowerCase();
     
     // Get all items to be searched
-    let items = document.getElementsByClassName('card');
+    let items = document.getElementsByClassName('movie-card');
     
     // Loop through all items
     for (let i = 0; i < items.length; i++) {

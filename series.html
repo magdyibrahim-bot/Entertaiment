@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment</title>
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/categorical.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/star.css">
+    <link rel="stylesheet" href="css/movies.css">
+    <link rel="stylesheet" href="css/card_style.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo">
+                    <a href="index.html"><b>Entertainment</b> <span></span></a>
+                </h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="main">
+                <div class="slider">
+                    <!-- list items -->
+                    <div class="list">
+                        <div class="item active">
+                            <video autoplay muted loop src="videos/adver_2.mp4"></video>
+
+                            <div class="content">
+                                <p>Series</p>
+                                <h2>All Categories</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+        </div>
+
+
+        <div class="links">
+            <ul>
+                <li><a href="index.html" style="--i: 0.05s"><b>Home</b></a></li>
+                <li><a href="movies.html" style="--i: 0.1s"><b>Movies</b></a></li>
+                <li><a href="series.html" style="--i: 0.15s"><b>Series</b></a></li>
+                <li><a href="carton.html" style="--i: 0.2s"><b>Carton</b></a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="centered-line"></div>
+
+    <div class="container_1">
+
+        <div class="line"></div>
+        <span class="text"><b class="text-1">Latest Releases ></b></span>
+
+        <div class="container_2">
+            <input id="searchbar" onkeyup="searchItems()" type="text" placeholder="Search Series...">
+        </div>
+
+    </div>
+
+    <div class="button-container">
+        <button class="category-button" onclick="filterCards('all')">All</button>
+        <button class="category-button" onclick="filterCards('action')">Action</button>
+        <button class="category-button" onclick="filterCards('drama')">Drama</button>
+        <button class="category-button" onclick="filterCards('adventure')">Adventure</button>
+        <button class="category-button" onclick="filterCards('fantasy')">Fantasy</button>
+        <button class="category-button" onclick="filterCards('horror')">Horror</button>
+        <button class="category-button" onclick="filterCards('comedy')">Comedy</button>
+        <button class="category-button" onclick="filterCards('romance')">Romance</button>
+    </div>
+
+    <div class="flex">
+        <div class="card" id="film_0" data-category="fantasy">
+            <img src="img/TROP.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">LOTR(1st episode)</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://www.mediafire.com/file/ld12zvo4ijz73ra/The.Lord.of.the.Rings.The.Rings.of.Power.S02E01.EgyDead.CoM.mp4/file" target="_blank" class="download-button">Download</a>
+                <a href="https://vidhideplus.com/file/vtgpgauyxj7q" target="_blank" class="download-button">Watch</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Movies</h3>
+                <ul>
+                    <li><a href="#">Latest Releases</a></li>
+                    <li><a href="#">Top Rated</a></li>
+                    <li><a href="#">Genres</a></li>
+                    <li><a href="#">Upcoming</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Email Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/profile.php?id=100088839235808" target="_blank"><i
+                                class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/in/magdy-ibrahim-bb743b220/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i> Linkedin</a></li>
+                    <li><a href="https://www.instagram.com/magdyibrahim64/" target="_blank"><i
+                                class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Entertainment SIte. All rights reserved. <b style="color:  rgb(138, 12, 12);">(Created by
+                    Afsha)</b> </p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+    <script src="script/menu.js"></script>
+    <script src="script/star.js"></script>
+    <script src="script/search_2.js"></script>
+    <script src="script/categorical.js"></script>
+</body>
+
+</html>
