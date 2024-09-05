@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Responsive Regisration Form </title>
+</head>
+
+<body>
+    <div class="container">
+        <header>Add Entertainment</header>
+        <form id="movie-form">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Entertainment Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Title</label>
+                            <input type="text" id="movie-name" placeholder="Movie Title" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Rate</label>
+                            <input type="text" id="movie-rating" placeholder="Rating" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Category</label>
+                            <input type="text" id="movie-category" placeholder="category" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Image URL</label>
+                            <input type="text" id="movie-image" placeholder="Image URL" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Watching</label>
+                            <input type="text" id="movie-view" placeholder="View URL" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Download URL</label>
+                            <input type="text" id="movie-download" placeholder="Download URL" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Trailer URL</label>
+                            <input type="text" id="movie-trailer" placeholder="Trailer URL" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Type</label>
+                            <select required id="movie-type">
+                                <option disabled selected>Select Type</option>
+                                <option>Movie</option>
+                                <option>Series</option>
+                                <option>Carton</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="nextBtn" type="submit">
+                        <span class="btnText">ADD</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="script/add-movie.js"></script>
+</body>
+
+</html>
