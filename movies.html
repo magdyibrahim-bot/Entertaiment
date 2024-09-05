@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entertainment</title>
-    <link rel="stylesheet" href="css/trailer-2.css">
+    <link rel="stylesheet" href="css/trailer.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/categorical.css">
     <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/star.css">
     <link rel="stylesheet" href="css/movies.css">
     <link rel="stylesheet" href="css/card_style.css">
     <link rel="stylesheet" href="css/css.css">
@@ -89,12 +90,48 @@
         <button class="category-button" onclick="filterCards('romance')">Romance</button>
     </div>
 
-    <div class="flex" id="movie-list"></div>
+    <div class="flex" id="movie-list">
+        <div class="card" id="film_0" data-category="horror">
+            <img src="img/infested.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">Infested</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://vidhideplus.com/file/1l50omv92s73" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://www.mediafire.com/file/4646qt44jpjsrqo/Infested.2023.1080p.WEB-DL.EgyDead.CoM.mp4/file"
+                    target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="" class="trailer-button" data-trailer="https://vidhideplus.com/embed/54wlez1qrwz0"><i class="fa-solid fa-rectangle-ad"></i></a>
+            </div>
+        </div>
+        <div class="card" id="film_1" data-category="horror">
+            <img src="img/0.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">New Life</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://vidhideplus.com/file/0kkwka6exgin" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://www.mediafire.com/file/zxknqfajvr96f3q/New.Life.2024.1080p.WEB-DL.EgyDead.CoM.mp4/file"
+                    target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="" class="trailer-button" data-trailer="https://vidhideplus.com/embed/emowq0eckrai"><i class="fa-solid fa-rectangle-ad"></i></a>
+            </div>
+        </div>
 
-    <div id="trailer-modal" class="trailer-modal">
+        <div class="card" id="film_2" data-category="action">
+            <img src="img/4.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">Damsel</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://vidhideplus.com/file/l9qwcwp3878g" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://www.mediafire.com/file/3efra6bzo232jo9/Damsel.2024.1080p.WEB-DL.EgyDead.CoM.mp4/file"
+                    target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="" class="trailer-button" data-trailer="https://vidhideplus.com/embed/57db6jjshi9k"><i class="fa-solid fa-rectangle-ad"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="trailerModal" class="modal">
         <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <iframe id="trailer-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            <span class="close">&times;</span>
+            <iframe id="trailerVideo" width="640" height="360" src="" frameborder="0" allow="autoplay; encrypted-media"  FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO  allowfullscreen></iframe>
         </div>
     </div>
 
@@ -140,8 +177,8 @@
     <script src="script/star.js"></script>
     <script src="script/search_2.js"></script>
     <script src="script/categorical.js"></script>
-    <script src="script/trailer_2.js"></script>
-    <script src="script/display-movie.js"></script>
+    <script src="script/trailer.js"></script>
+    <script src="script_2.js"></script>
 </body>
 
 </html>

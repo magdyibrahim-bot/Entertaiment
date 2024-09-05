@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entertainment</title>
-    <link rel="stylesheet" href="css/trailer-2.css">
+    <link rel="stylesheet" href="css/trailer.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/categorical.css">
     <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/star.css">
     <link rel="stylesheet" href="css/movies.css">
     <link rel="stylesheet" href="css/card_style.css">
     <link rel="stylesheet" href="css/css.css">
@@ -38,10 +39,10 @@
                     <!-- list items -->
                     <div class="list">
                         <div class="item active">
-                                <video autoplay muted loop src="videos/adver_2.mp4"></video>
-                
+                            <video autoplay muted loop src="videos/adver_2.mp4"></video>
+
                             <div class="content">
-                                <p>Movies</p>
+                                <p>Series</p>
                                 <h2>All Categories</h2>
                             </div>
                         </div>
@@ -66,7 +67,7 @@
     </div>
 
     <div class="centered-line"></div>
-    
+
     <div class="container_1">
 
         <div class="line"></div>
@@ -89,12 +90,73 @@
         <button class="category-button" onclick="filterCards('romance')">Romance</button>
     </div>
 
-    <div class="flex" id="movie-list"></div>
+    <div class="flex">
+        <div class="card" id="film_0" data-category="fantasy">
+            <img src="img/TROP.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">LOTR(S02 E01)</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://vidhideplus.com/file/vtgpgauyxj7q" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://vidhideplus.com/download/vtgpgauyxj7q" target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="#" class="trailer-button" data-trailer="https://vidhideplus.com/embed/rbalp2ck1pvk"><i class="fa-solid fa-rectangle-ad"></i></a>
+                
+            </div>
+        </div>
 
-    <div id="trailer-modal" class="trailer-modal">
+        <div class="card" id="film_0" data-category="fantasy">
+            <img src="img/TROP.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">LOTR(S02 E02)</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://vidhideplus.com/file/p258l9k3060e" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://vidhideplus.com/download/p258l9k3060e" target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="#" class="trailer-button" data-trailer="https://vidhideplus.com/embed/rbalp2ck1pvk"><i class="fa-solid fa-rectangle-ad"></i></a>
+                
+            </div>
+        </div>
+
+        <div class="card" id="film_0" data-category="fantasy">
+            <img src="img/TROP.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">LOTR(S02 E03)</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://vidhideplus.com/file/og8c6edfi13m" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://vidhideplus.com/download/og8c6edfi13m" target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="#" class="trailer-button" data-trailer="https://vidhideplus.com/embed/rbalp2ck1pvk"><i class="fa-solid fa-rectangle-ad"></i></a>
+                
+            </div>
+        </div>
+
+        <div class="card" id="film_0" data-category="fantasy">
+            <img src="img/TROP.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">LOTR(S02 E04)</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://vidhideplus.com/file/igtqa2mihx22" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://vidhideplus.com/download/igtqa2mihx22" target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="#" class="trailer-button" data-trailer="https://vidhideplus.com/embed/rbalp2ck1pvk"><i class="fa-solid fa-rectangle-ad"></i></a>
+                
+            </div>
+        </div>
+
+        <div class="card" id="film_0" data-category="fantasy">
+            <img src="img/twd.jpg" alt="Movie Image" class="movie-image">
+            <div class="card-content">
+                <h2 class="movie-title">TWD(S01 E01)</h2>
+                <p><i class="fa-solid fa-star"></i> 9.5/10</p>
+                <a href="https://gsfomqu.sbs/f/utr7a70f8o77" target="_blank" class="download-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://gsfomqu.sbs/d/utr7a70f8o77" target="_blank" class="download-button"><i class="fa-solid fa-download"></i></a>
+                <a href="#" class="trailer-button" data-trailer=""><i class="fa-solid fa-rectangle-ad"></i></a>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div id="trailerModal" class="modal">
         <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <iframe id="trailer-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            <span class="close">&times;</span>
+            <iframe id="trailerVideo" width="640" height="360" src="" frameborder="0" allow="autoplay; encrypted-media"  FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO  allowfullscreen></iframe>
         </div>
     </div>
 
@@ -140,8 +202,7 @@
     <script src="script/star.js"></script>
     <script src="script/search_2.js"></script>
     <script src="script/categorical.js"></script>
-    <script src="script/trailer_2.js"></script>
-    <script src="script/display-series.js"></script>
+    <script src="script/trailer.js"></script>
 </body>
 
 </html>
